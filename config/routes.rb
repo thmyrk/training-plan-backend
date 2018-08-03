@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :diets, only: [:show]
-      resources :meals, only: [:create]
+      resources :workouts, only: [:show]
+      resources :exercises, only: [:create]
     end
   end
 end
