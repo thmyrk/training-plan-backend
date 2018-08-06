@@ -31,5 +31,5 @@ ExerciseTag.create!(exercise: exercises[1], tag: tags[1])
 ExerciseTag.create!(exercise: exercises[1], tag: tags[2])
 
 # workout exercises
-WorkoutExercise.create!(exercise: exercises[0], workout: workouts[0])
-WorkoutExercise.create!(exercise: exercises[1], workout: workouts[0])
+WorkoutExercise.create!(exercise: exercises[0], workout: workouts[0], sets: 5, reps: 5)
+WorkoutExercise.create!(exercise: exercises[1], workout: workouts[0], sets: 3, reps: 10)

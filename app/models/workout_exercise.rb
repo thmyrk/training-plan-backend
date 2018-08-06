@@ -7,6 +7,8 @@
 #  exercise_id :uuid             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  sets        :integer
+#  reps        :integer
 #
 
 class WorkoutExercise < ApplicationRecord

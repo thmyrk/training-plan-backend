@@ -12,9 +12,9 @@ class WorkoutPresenter < BasePresenter
     workout
   end
 
-  def with_full_exercises
+  def with_workout_exercises
     workout = {}
-    workout[:exercises] = ExercisesPresenter.new(@workout.exercises).build_many(:basic, :with_tags)
+    workout[:workout_exercises] = WorkoutExercisesPresenter.new(@workout.workout_exercises).build_many(:basic)
     workout
   end
 end

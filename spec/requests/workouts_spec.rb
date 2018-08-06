@@ -47,7 +47,7 @@ RSpec.describe "Workouts API" do
       it { expect(parsed_response.keys).to eq(["errors"]) }
     end
 
-    context "when workout has exercises" do
+    context "when workout has workout exercises" do
       let(:workout) { create(:workout, :with_exercises_with_tags) }
 
       before { subject }
@@ -55,8 +55,9 @@ RSpec.describe "Workouts API" do
       it { expect(parsed_response.keys).to match_array(workout_response_keys) }
       it { expect(parsed_response["id"]).to eq(workout_id) }
       it { expect(parsed_response["name"]).to eq(workout_name) }
-      it { expect(parsed_response["exercises"].first.keys).to match_array(exercise_response_keys) }
-      it { expect(parsed_response["exercises"].first["tags"].first.keys).to match_array(tag_response_keys) }
+      it { expect(parsed_response["workout_exercises"].first.keys).to match_array(workout_exercise_response_keys) }
+      it { expect(parsed_response["workout_exercises"].first["exercise"].keys).to match_array(exercise_response_keys) }
+      it { expect(parsed_response["workout_exercises"].first["exercise"]["tags"].first.keys).to match_array(tag_response_keys) }
     end
   end
 end

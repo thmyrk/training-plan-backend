@@ -4,7 +4,7 @@ module Api
       def show
         validate_params!(WorkoutsShowSchema::Schema)
         workout = UseCases::Workouts::Show.new(workouts_show_params).call
-        render_ok(WorkoutPresenter.new(workout).build(:basic, :with_full_exercises))
+        render_ok(WorkoutPresenter.new(workout).build(:basic, :with_workout_exercises))
       end
 
       private
