@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :workouts, only: [:show]
       resources :exercises, only: [:index, :create]
+      resources :workout_exercises, only: [:create]
     end
   end
 end

@@ -4,7 +4,7 @@ RSpec.shared_context "model response keys" do
   end
 
   let(:workout_exercise_response_keys) do
-    %w[id sets reps exercise updated_at created_at]
+    %w[id sets reps workout_id exercise updated_at created_at]
   end
 
   let(:exercise_response_keys) do
